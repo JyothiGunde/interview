@@ -13,4 +13,8 @@ provider "aws" {
 resource "aws_instance" "my-ec2-tf" {
 	ami = "ami-07ff62358b87c7116"
 	instance_type = "t2.nano"
+
+	tags = {
+		Name = "demo"
+	}
 }
