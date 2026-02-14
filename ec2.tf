@@ -15,6 +15,6 @@ resource "aws_instance" "my-ec2-tf" {
 	instance_type = "t2.nano"
 
 	tags = {
-		Name = "demo"
+		Name = "tf-demo"
 	}
 }
