@@ -33,7 +33,7 @@ pipeline {
 		
 		stage('Terraform Destroy') {
 			when {
-				expression { return param.Destory_Infra == true }
+				expression { return params.Destroy_Infra == true }
 			}
 
 			steps {
