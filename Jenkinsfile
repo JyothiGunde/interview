@@ -7,7 +7,7 @@ pipeline {
 
 	stages {
 	
-		stage('checkout) {
+		stage('checkout') {
 			steps {
 				checkout scm
 			}
@@ -35,8 +35,9 @@ pipeline {
 			when {
 				expression { return param.Destory_Infra == true }
 			}
+
 			steps {
-				sh 'terraform destroy -auto-approve
+				sh 'terraform destroy -auto-approve'
 			}
 		}
 
