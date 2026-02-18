@@ -2,8 +2,8 @@ resource "aws_iam_role" "ec2_role" {
 	name = "tf-ec2-role"
 
 	assume_role_policy = jsonencode({
-		version = "2012-10-17"
-		statement = [{ 
+		Version = "2012-10-17"
+		Statement = [{ 
 				Effect = "Allow"
 				principal = {
 					service = "ec2.awsamzon.com"
@@ -18,8 +18,8 @@ resource "aws_iam_policy" "read_policy" {
 	name = "S3ReadPolicy"
 
 	policy = jsonencode({
-		version = "2012-10-17"
-		statement = [{
+		Version = "2012-10-17"
+		Statement = [{
 				Effect = "Allow"
 				Action = [
 					"s3:GetObject",
