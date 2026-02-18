@@ -5,8 +5,8 @@ resource "aws_iam_role" "ec2_role" {
 		Version = "2012-10-17"
 		Statement = [{ 
 				Effect = "Allow"
-				principal = {
-					service = "ec2.awsamzon.com"
+				Principal = {
+					Service = "ec2.awsamazon.com"
 				}
 				Action = "sts:AssumeRole"
 			}
